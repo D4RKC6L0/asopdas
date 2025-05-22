@@ -21,3 +21,9 @@ server.post('/receber_nome',(req,res) =>{
         res.status(400).send({msg:'Nome não recebido'})
     }
     })
+
+    server.post('/receber_id',(req,res) =>{
+        const IDac=req.body.id
+        pesquisa()
+    })    
+    server.listen(porta, () =>{console.log('servidor rodando')})
